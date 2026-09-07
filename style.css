@@ -1,0 +1,267 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #55779c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    
+    width: 100%;
+    max-width: 420px;
+    background: #ce5656;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(14, 1, 1);
+}
+
+header p {
+    color: #f5f0f0;
+    font-size: 14px;
+}
+
+/* Balance Section */
+.balance {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    
+}
+
+#balance {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Income & Expense Summary */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.income,
+.expense {
+    width: 48%;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.income h4,
+.expense h4 {
+    font-size: 14px;
+    color: #555;
+}
+
+#income {
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+#expense {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+/* Add Transaction Section */
+.add-transaction {
+    margin-bottom: 20px;
+}
+
+.add-transaction h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.form-control {
+    margin-bottom: 12px;
+}
+
+.form-control label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-control small {
+    font-size: 11px;
+    color: #f9f5f5;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #27b26a;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0c411e;
+}
+
+/* Transaction History */
+.history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#transaction-list {
+    list-style: none;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar (optional but classy) */
+#transaction-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#transaction-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+#transaction-list span:last-child {
+    font-weight: 500;
+}
+
+
+/* Individual Transaction */
+#transaction-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#transaction-list li {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#transaction-list li:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Income & Expense Border */
+#transaction-list li.income {
+    border-right: 5px solid #2ecc71;
+}
+
+#transaction-list li.expense {
+    border-right: 5px solid #e74c3c;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* Filter Section */
+.filter {
+    margin-bottom: 15px;
+}
+
+.filter label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.filter select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    #balance {
+        font-size: 24px;
+    }
+}
+
